@@ -41,7 +41,7 @@ h3, h5     { color: var(--blue); }
 .page-header{
   /* Single hero image */
   background: #000 !important;
-  background-image: url("{{ '/assets/images/qfin-logo-hero.png' | relative_url }}") !important;
+  background-image: url("{{ '/assets/images/qfin-logo-hero-simple.png' | relative_url }}") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
