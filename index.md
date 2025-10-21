@@ -15,9 +15,6 @@ title: ""
     {% endif %}
     <div>
       
-<div class="qfin-hero-banner">
-  <img src="{{ '/assets/images/qfin-logo-hero.png' | relative_url }}" alt="QFIN logo hero">
-</div>
 <h1 class="trans-title" style="margin:0;">QFIN - Queer and Feminist Informatics Network</h1>
       <p class="qfin-tagline">
         An open, inclusive network embedded in the <strong>Digital Interactions Lab (DILab)</strong> at the
