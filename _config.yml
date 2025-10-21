@@ -1,7 +1,7 @@
 
 title: "Queer and Feminist Informatics Network"
 description: "An open, inclusive network embedded in the Digital Interactions Lab (DILab) at the Informatics Institute (IvI), University of Amsterdam."
-qfin_logo: "/assets/images/qfin-logo-hero.png"
+qfin_logo: "/assets/images/qfin-logo-hero-simple.png"
 baseurl: ""  # If using a project site, set this to "/<repo>"
 url: "https://yourusername.github.io"
 
@@ -13,7 +13,7 @@ remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
 
-qfin_logo: "/assets/images/qfin-logo-hero.jpg"
+qfin_logo: "/assets/images/qfin-logo-hero-simple.png"
 dilab_logo: "/assets/images/dilab-logo.svg"
 
 markdown: kramdown
