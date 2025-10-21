@@ -53,9 +53,9 @@ The Queer and Feminist Informatics Network (QFIN) is an open, inclusive communit
 
 QFIN aims to strengthen research that interrogates how digital systems shape power, identity, and everyday life, while also building a supportive space for queer and trans researchers to thrive. The network welcomes work spanning HCI, AI and data science, software engineering, sociotechnical systems, critical data studies, and adjacent fields. Core values include intersectionality, accessibility, community accountability, and consent-based, privacy-respecting research practices.
 
-The network hosts book talks, research seminars, methods workshops, and reading groups, alongside low-barrier community events such as writing sessions and mentoring meetups. To lower barriers to participation and make events convivial, lunch is provided at most in-person sessions. QFIN also surfaces resources, shares opportunities, and facilitates collaborations across institutions, with informal advice on inclusive study design, ethics applications, and harm-reduction approaches for working with sensitive data and communities.
+The network hosts book talks, research seminars, methods workshops, and reading groups, alongside low-barrier community events such as writing sessions and mentoring meetups. To lower barriers to participation and make events convivial, lunch is provided at most in-person sessions. QFIN also surfaces resources, shares opportunities, and facilitates collaborations across institutions, with informal advice on inclusive study design, ethics applications for working with sensitive data and communities.
 
-Most events take place in Lab42 at Amsterdam Science Park, with hybrid participation when possible. Membership is informal and open: anyone interested in feminist or queer approaches to computing—or simply curious to learn more—is welcome.
+Most events take place in Lab42 at Amsterdam Science Park, with hybrid participation when possible. Membership is informal and open: anyone interested in feminist or queer approaches to computing—or simply curious to learn more; is welcome.
     </p>
   </div>
 
