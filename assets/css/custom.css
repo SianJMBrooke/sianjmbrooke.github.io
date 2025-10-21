@@ -1,12 +1,14 @@
 ---
 ---
 
+/* ========== Config-driven colours ========== */
 :root{
+  /* From _config.yml (with defaults) */
   --title-color: {{ site.title_color | default: '#ffffff' }};
   --title-blue:  {{ site.title_gradient_blue | default: '#a3d5ff' }};
   --title-pink:  {{ site.title_gradient_pink | default: '#f5a9d6' }};
-}
-:root{
+
+  /* Base palette */
   --bg:#000000;
   --txt:#ffffff;
   --pink:#f5a9d6;
@@ -15,117 +17,60 @@
   --border:#26262b;
 }
 
+/* ========== Base ========== */
 html, body { background: var(--bg); color: var(--txt); }
 
-.page-header { background:#000 !important; color:var(--txt) !important; border-bottom:1px solid var(--border); }
+.page-header {
+  background:#000 !important;
+  color:var(--txt) !important;
+  border-bottom:1px solid var(--border);
+}
 .project-name, .project-tagline { color: var(--txt) !important; }
 
 a { color: var(--blue); }
 a:hover { color: var(--pink); }
 
-/* Monospace headings for readability */
+/* Monospace headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   letter-spacing: 0.2px;
 }
 
-/* Heading colours: title uses trans flag gradient, h2 pink, h3 blue */
-.trans-title.gradient{
-  background: linear-gradient(180deg,
-    var(--blue) 0%,
-    var(--blue) 20%,
-    var(--pink) 20%,
-    var(--pink) 40%,
-    #ffffff 40%,
-    #ffffff 60%,
-    var(--pink) 60%,
-    var(--pink) 80%,
-    var(--blue) 80%,
-    var(--blue) 100%
-  );
-  .trans-title{
+/* Alternate heading colours */
+h2, h4, h6 { color: var(--pink); }
+h3, h5     { color: var(--blue); }
+
+/* ========== Title (H1) styles ========== */
+/* Solid colour title taken from _config.yml */
+.trans-title{
   color: var(--title-color);
   -webkit-text-fill-color: var(--title-color);
-  background: none;
 }
+
+/* Add the .gradient class to switch to trans-flag gradient */
+.trans-title.gradient{
+  background: linear-gradient(
+    180deg,
+    var(--title-blue) 0%,
+    var(--title-blue) 20%,
+    var(--title-pink) 20%,
+    var(--title-pink) 40%,
+    #ffffff 40%,
+    #ffffff 60%,
+    var(--title-pink) 60%,
+    var(--title-pink) 80%,
+    var(--title-blue) 80%,
+    var(--title-blue) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-h2 { color: var(--pink); }
-h3 { color: var(--blue); }
-h4, h5, h6 { color: var(--txt); }
-
-.qfin-wrap { max-width: 1080px; margin: 0 auto; }
-
-.qfin-hero {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1rem;
-  align-items: center;
-  padding-top: 0.5rem;
-}
-.qfin-hero img { width: 140px; height: auto; border-radius: 8px; }
-
-.qfin-tagline { color: var(--txt); font-size: 1.06rem; margin: 0.2rem 0; }
-.qfin-subtle { color: #dadada; font-size: 0.98rem; }
-
-.badge { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border:1px solid var(--border); font-size: 0.8rem; margin-right: 0.4rem; }
-
-.qfin-section { margin: 2rem 0 1rem; }
-.qfin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-.qfin-card { background: var(--card); border:1px solid var(--border); border-radius: 14px; padding: 1rem; }
-.qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
-.qfin-desc { margin-top: 0.35rem; }
-
-.qfin-btn { display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; border:1px solid var(--border); text-decoration:none; font-weight:700; color: var(--txt); }
-.qfin-btn:hover { border-color: var(--pink); color:#000; background: var(--pink); }
-
-.qfin-member { display:grid; grid-template-columns: 84px 1fr; gap:0.9rem; align-items:start; }
-.qfin-member img { width:84px; height:84px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background:#111; }
-.qfin-small { font-size:0.95rem; color:#d6d6d6; }
-.qfin-hr { border:0; height:1px; background: var(--border); margin: 1.5rem 0; }
-
-.pub-list { list-style:none; padding-left:0; }
-.pub-list li { border-bottom:1px dashed var(--border); padding:0.6rem 0; }
-.pub-title { color:var(--txt); font-weight:700; }
-.pub-venue { color: var(--blue); }
-.pub-authors { color:#eaeaea; }
-.pub-year { color: var(--pink); font-weight:700; padding-left:0.25rem; }
-.pub-links a { margin-right:0.5rem; }
-
-.footer-note { margin-top:2rem; color:#bdbdbd; font-size:0.9rem; }
-
-
-/* === QFIN hero and headings === */
-
-:root{
-  --bg:#000000;
-  --txt:#ffffff;
-  --pink:#f5a9d6;
-  --blue:#a3d5ff;
-  --card:#0e0e10;
-  --border:#26262b;
+  margin: 0.6rem 0 0.2rem 0;
+  text-align: center;
 }
 
-html, body { background: var(--bg); color: var(--txt); }
-
-/* Monospace headings and alternating colours */
-h1, h2, h3, h4, h5, h6 {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  letter-spacing: 0.2px;
-}
-/* Alternating colours */
-h2, h4, h6 { color: var(--pink); }
-h3, h5 { color: var(--blue); }
-
-/* Hero banner like Google Forms */
+/* ========== Hero (Google Forms-style) ========== */
 .qfin-hero-banner {
   background:#000;
   display:flex;
@@ -137,32 +82,36 @@ h3, h5 { color: var(--blue); }
 }
 .qfin-hero-banner img { max-height: 120px; width:auto; }
 
-/* Title gradient in trans colours */
-.trans-title {
-  background: linear-gradient(180deg,
-    var(--blue) 0%, var(--blue) 20%,
-    var(--pink) 20%, var(--pink) 40%,
-    #ffffff 40%, #ffffff 60%,
-    var(--pink) 60%, var(--pink) 80%,
-    var(--blue) 80%, var(--blue) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  margin: 0.6rem 0 0.2rem 0;
-  text-align: center;
-}
-
-/* Tagline */
-.qfin-tagline {
-  color:#e8e8e8;
-  text-align:center;
-  margin: 0 0 1rem 0;
-}
-
-/* Container wrap */
+/* Tagline and layout */
+.qfin-tagline { color:#e8e8e8; text-align:center; margin: 0 0 1rem 0; }
 .qfin-wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-/* Member card heading should inherit level colour */
-.qfin-member h3 { margin: 0 0 0.2rem 0; }
+/* ========== Cards / Grids ========== */
+.qfin-section { margin: 2rem 0 1rem; }
+.qfin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.qfin-card { background: var(--card); border:1px solid var(--border); border-radius: 14px; padding: 1rem; }
+.qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
+.qfin-desc { margin-top: 0.35rem; }
+
+.qfin-btn { display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; border:1px solid var(--border); text-decoration:none; font-weight:700; color: var(--txt); }
+.qfin-btn:hover { border-color: var(--pink); color:#000; background: var(--pink); }
+
+/* ========== Members ========== */
+.qfin-member { display:grid; grid-template-columns: 84px 1fr; gap:0.9rem; align-items:start; }
+.qfin-member img { width:84px; height:84px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background:#111; }
+.qfin-member h3 { margin: 0 0 0.2rem 0; } /* inherits H3 blue by default */
+.qfin-small { font-size:0.95rem; color:#d6d6d6; }
+
+.qfin-hr { border:0; height:1px; background: var(--border); margin: 1.5rem 0; }
+
+/* ========== Publications ========== */
+.pub-list { list-style:none; padding-left:0; }
+.pub-list li { border-bottom:1px dashed var(--border); padding:0.6rem 0; }
+.pub-title { color:var(--txt); font-weight:700; }
+.pub-venue { color: var(--blue); }
+.pub-authors { color:#eaeaea; }
+.pub-year { color: var(--pink); font-weight:700; padding-left:0.25rem; }
+.pub-links a { margin-right:0.5rem; }
+
+/* Footer */
+.footer-note { margin-top:2rem; color:#bdbdbd; font-size:0.9rem; }
