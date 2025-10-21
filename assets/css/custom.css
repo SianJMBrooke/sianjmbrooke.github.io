@@ -1,4 +1,11 @@
+---
+---
 
+:root{
+  --title-color: {{ site.title_color | default: '#ffffff' }};
+  --title-blue:  {{ site.title_gradient_blue | default: '#a3d5ff' }};
+  --title-pink:  {{ site.title_gradient_pink | default: '#f5a9d6' }};
+}
 :root{
   --bg:#000000;
   --txt:#ffffff;
