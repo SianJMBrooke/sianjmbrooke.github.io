@@ -6,6 +6,23 @@ title: "QFIN - Queer and Feminist Informatics Network"
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <script src="{{ '/assets/js/bibtex.js' | relative_url }}"></script>
 
+<!-- Page-specific styles (acts like head overrides) -->
+<style>
+  /* More breathing room between sections */
+  .qfin-section { margin: 3.5rem 0 2.25rem !important; }
+
+  /* Publications: no bold, indented list */
+  .pub-list { margin: 0; padding-left: 1.25rem; }
+  .pub-list li { padding: 0.6rem 0 0.9rem 0; }
+  .pub-title, .pub-authors, .pub-venue { font-weight: 400 !important; }
+
+  /* Default: publication links inherit text colour (not blue) */
+  .pub-links a { color: inherit !important; text-decoration: underline; }
+
+  /* Only DOI & URL are light blue */
+  .pub-links a[data-accent="true"] { color: var(--blue) !important; }
+</style>
+
 <!-- Title under the single header hero image -->
 <h1 class="trans-title gradient">QFIN - Queer and Feminist Informatics Network</h1>
 <p class="qfin-tagline" style="text-align:center; color:#e8e8e8;">
@@ -73,6 +90,18 @@ title: "QFIN - Queer and Feminist Informatics Network"
     <script>
       document.addEventListener('DOMContentLoaded', function(){
         renderPublications("{{ '/assets/bibliography/publications.bib' | relative_url }}", "pub-container");
+
+        // After the list renders, mark DOI + URL links for accent colour
+        const markAccent = () => {
+          document.querySelectorAll('.pub-links a').forEach(a => {
+            const t = (a.textContent || '').trim().toUpperCase();
+            if (t === 'DOI' || t === 'URL' || a.href.startsWith('https://doi.org/')) {
+              a.setAttribute('data-accent','true');
+            }
+          });
+        };
+        // small delay to ensure renderPublications finished
+        setTimeout(markAccent, 0);
       });
     </script>
   </div>
