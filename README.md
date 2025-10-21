@@ -2,6 +2,8 @@
 # QFIN - GitHub Pages site
 Site found at: https://sianjmbrooke.github.io
 
+moving to: www.qfinformatics.com
+
 ## Publish
 1. Create a GitHub repo and upload these files.
 2. Settings -> Pages -> Source: Deploy from branch (root).
