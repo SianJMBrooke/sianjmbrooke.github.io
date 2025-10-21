@@ -1,9 +1,13 @@
 ---
 ---
 
-/* ========== Config-driven colours ========== */
+/* ================================
+   QFIN — custom theme overrides
+   Header = hero image (first thing)
+   ================================ */
+
+/* Config-driven colours from _config.yml (optional) */
 :root{
-  /* From _config.yml (with defaults) */
   --title-color: {{ site.title_color | default: '#ffffff' }};
   --title-blue:  {{ site.title_gradient_blue | default: '#a3d5ff' }};
   --title-pink:  {{ site.title_gradient_pink | default: '#f5a9d6' }};
@@ -17,20 +21,11 @@
   --border:#26262b;
 }
 
-/* ========== Base ========== */
+/* Base */
 html, body { background: var(--bg); color: var(--txt); }
-
-.page-header {
-  background:#000 !important;
-  color:var(--txt) !important;
-  border-bottom:1px solid var(--border);
-}
-.project-name, .project-tagline { color: var(--txt) !important; }
-
 a { color: var(--blue); }
 a:hover { color: var(--pink); }
 
-/* Monospace headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   letter-spacing: 0.2px;
@@ -40,14 +35,45 @@ h1, h2, h3, h4, h5, h6 {
 h2, h4, h6 { color: var(--pink); }
 h3, h5     { color: var(--blue); }
 
-/* ========== Title (H1) styles ========== */
-/* Solid colour title taken from _config.yml */
+/* ================================
+   HERO HEADER (Cayman .page-header)
+   ================================ */
+.page-header{
+  /* Make header the hero image */
+  background:
+    #000
+    url("{{ '/assets/images/qfin-logo-hero.png' | relative_url }}")
+    no-repeat
+    center center !important;
+  background-size: contain !important;
+
+  /* Size and spacing */
+  min-height: 300px;        /* increase for a bigger hero */
+  padding: 0 !important;    /* remove default Cayman padding */
+  border-bottom: 1px solid var(--border);
+}
+
+/* Hide the theme’s text in the header so only the image shows */
+.page-header .project-name,
+.page-header .project-tagline{
+  display: none !important;
+}
+
+/* If you ever want a subtle shadow under the hero */
+/* .page-header { box-shadow: 0 12px 40px rgba(0,0,0,0.35); } */
+
+/* ================================
+   Title styles (used below hero)
+   ================================ */
+/* Solid title colour (from _config.yml) */
 .trans-title{
   color: var(--title-color);
   -webkit-text-fill-color: var(--title-color);
+  text-align: center;
+  margin: 0.6rem 0 0.2rem 0;
 }
 
-/* Add the .gradient class to switch to trans-flag gradient */
+/* Add .gradient to switch to trans-flag gradient */
 .trans-title.gradient{
   background: linear-gradient(
     180deg,
@@ -66,49 +92,35 @@ h3, h5     { color: var(--blue); }
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  margin: 0.6rem 0 0.2rem 0;
-  text-align: center;
 }
 
-/* ========== Hero (Google Forms-style) ========== */
-.qfin-hero-banner {
-  background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  min-height: 260px;   /* was 180px */
-  border-bottom: 1px solid var(--border);
-}
-
-.qfin-hero-banner img {
-  max-height: 220px;   /* was 120px */
-  width: auto;
-}
-
-/* Tagline and layout */
-.qfin-tagline { color:#e8e8e8; text-align:center; margin: 0 0 1rem 0; }
+/* ================================
+   Layout & components
+   ================================ */
 .qfin-wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-/* ========== Cards / Grids ========== */
 .qfin-section { margin: 2rem 0 1rem; }
 .qfin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .qfin-card { background: var(--card); border:1px solid var(--border); border-radius: 14px; padding: 1rem; }
+
 .qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
 .qfin-desc { margin-top: 0.35rem; }
 
-.qfin-btn { display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; border:1px solid var(--border); text-decoration:none; font-weight:700; color: var(--txt); }
+.qfin-btn {
+  display:inline-block; padding:0.55rem 0.9rem; border-radius:10px;
+  border:1px solid var(--border); text-decoration:none; font-weight:700; color: var(--txt);
+}
 .qfin-btn:hover { border-color: var(--pink); color:#000; background: var(--pink); }
 
-/* ========== Members ========== */
+/* Members */
 .qfin-member { display:grid; grid-template-columns: 84px 1fr; gap:0.9rem; align-items:start; }
 .qfin-member img { width:84px; height:84px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background:#111; }
-.qfin-member h3 { margin: 0 0 0.2rem 0; } /* inherits H3 blue by default */
+.qfin-member h3 { margin: 0 0 0.2rem 0; } /* inherits H3 (blue) */
 .qfin-small { font-size:0.95rem; color:#d6d6d6; }
 
 .qfin-hr { border:0; height:1px; background: var(--border); margin: 1.5rem 0; }
 
-/* ========== Publications ========== */
+/* Publications */
 .pub-list { list-style:none; padding-left:0; }
 .pub-list li { border-bottom:1px dashed var(--border); padding:0.6rem 0; }
 .pub-title { color:var(--txt); font-weight:700; }
