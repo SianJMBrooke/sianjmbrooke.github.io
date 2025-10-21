@@ -33,7 +33,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
   <!-- ABOUT -->
   <div class="qfin-section">
-    <h2 style="color:var(--blue);>About QFIN</h2>
+    <h2 style="color:var(--blue);">About QFIN</h2>
     <p class="qfin-subtle">
       QFIN centralises and better supports feminist and queer research in informatics and computer science —
       while creating a welcoming space for queer and trans researchers, students, and allies across the Netherlands.
