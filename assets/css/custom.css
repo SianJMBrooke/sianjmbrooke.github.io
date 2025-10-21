@@ -122,6 +122,12 @@ h3, h5     { color: var(--blue); }
   border-radius: 14px;
   padding: 1rem;
 }
+
+.qfin-section.events .qfin-card,
+.qfin-section.members .qfin-card {
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.12);
+}
 .qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
 .qfin-desc { margin-top: 0.35rem; }
 
