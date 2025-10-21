@@ -31,6 +31,14 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
 <div class="qfin-wrap">
 
+{% if site.dilab_logo %}
+  <p style="text-align:center;">
+    <img src="{{ site.dilab_logo | relative_url }}"
+         alt="DILab logo"
+         style="max-height:60px; display:block; margin:0 auto;">
+  </p>
+{% endif %}
+
   <!-- ABOUT -->
   <div class="qfin-section">
     <h2 style="color:var(--blue);">About QFIN</h2>
@@ -40,13 +48,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
       The network is embedded in the <strong>Digital Interactions Lab (DILab)</strong> at the
       <strong>Informatics Institute (IvI), University of Amsterdam</strong>.
     </p>
-{% if site.dilab_logo %}
-  <p style="text-align:center;">
-    <img src="{{ site.dilab_logo | relative_url }}"
-         alt="DILab logo"
-         style="max-height:60px; display:block; margin:0 auto;">
-  </p>
-{% endif %}
+
   </div>
 
   <!-- UPCOMING EVENTS -->
