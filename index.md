@@ -59,7 +59,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
       <div class="qfin-grid">
         {% for event in upcoming %}
           <div class="qfin-card">
-            <h3>{{ event.title }}</h3>
+            <h3 style="color:var(--pink);">{{ event.title }}</h3>
             <div class="qfin-meta"><strong>Date:</strong> {{ event.date | date: "%A, %d %B %Y" }}</div>
             {% if event.time %}<div class="qfin-meta"><strong>Time:</strong> {{ event.time }}</div>{% endif %}
             <div class="qfin-meta">
@@ -127,7 +127,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
               <img src="https://via.placeholder.com/84" alt="Placeholder portrait">
             {% endif %}
             <div>
-              <h3 style="margin:0 0 0.2rem 0;">{{ m.name }}</h3>
+              <h3 style="margin:0 0 0.2rem 0; color:var(--pink);">{{ m.name }}</h3>
               {% if m.pronouns %}<div class="qfin-small"><strong>Pronouns:</strong> {{ m.pronouns }}</div>{% endif %}
               {% if m.affiliation %}<div class="qfin-small"><strong>Affiliation:</strong> {{ m.affiliation }}</div>{% endif %}
               {% if m.email %}<div class="qfin-small"><strong>Email:</strong> <a href="mailto:{{ m.email }}">{{ m.email }}</a></div>{% endif %}
