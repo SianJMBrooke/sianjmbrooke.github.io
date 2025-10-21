@@ -77,10 +77,14 @@ h3, h5     { color: var(--blue); }
   align-items:center;
   justify-content:center;
   width:100%;
-  min-height: 180px;
+  min-height: 260px;   /* was 180px */
   border-bottom: 1px solid var(--border);
 }
-.qfin-hero-banner img { max-height: 120px; width:auto; }
+
+.qfin-hero-banner img {
+  max-height: 220px;   /* was 120px */
+  width: auto;
+}
 
 /* Tagline and layout */
 .qfin-tagline { color:#e8e8e8; text-align:center; margin: 0 0 1rem 0; }
