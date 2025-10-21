@@ -51,7 +51,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
   <!-- UPCOMING EVENTS -->
   <div class="qfin-section">
-    <h2>Upcoming events</h2>
+    <h2 style="color:var(--blue);">Upcoming events</h2>
     {% assign upcoming = site.data.events | sort: 'date' %}
     {% if upcoming and upcoming.size > 0 %}
       <div class="qfin-grid">
@@ -89,7 +89,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
   <!-- PUBLICATIONS -->
   <div class="qfin-section">
-    <h2>Publications by QFIN members and speakers</h2>
+    <h2 style="color:var(--blue);">Publications by QFIN members and speakers</h2>
     <div id="pub-container"><em class="qfin-subtle">Loading publications...</em></div>
     <script>
       document.addEventListener('DOMContentLoaded', function(){
@@ -114,7 +114,7 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
   <!-- FOUNDING MEMBERS -->
   <div class="qfin-section">
-    <h2>Founding members</h2>
+    <h2 style="color:var(--blue);">Founding members</h2>
     {% if site.data.members and site.data.members.size > 0 %}
       <div class="qfin-grid">
         {% for m in site.data.members %}
