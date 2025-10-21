@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Heading colours: title uses trans flag gradient, h2 pink, h3 blue */
-.trans-title {
+.trans-title.gradient{
   background: linear-gradient(180deg,
     var(--blue) 0%,
     var(--blue) 20%,
@@ -43,6 +43,16 @@ h1, h2, h3, h4, h5, h6 {
     var(--blue) 80%,
     var(--blue) 100%
   );
+  .trans-title{
+  color: var(--title-color);
+  -webkit-text-fill-color: var(--title-color);
+  background: none;
+}
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
