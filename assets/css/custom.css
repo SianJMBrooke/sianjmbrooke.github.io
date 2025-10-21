@@ -3,10 +3,10 @@
 
 /* ================================
    QFIN — custom theme overrides
-   Header = hero image (first thing)
+   Header shows ONE hero image
    ================================ */
 
-/* Config-driven colours from _config.yml (optional) */
+/* Optional: config-driven colours from _config.yml */
 :root{
   --title-color: {{ site.title_color | default: '#ffffff' }};
   --title-blue:  {{ site.title_gradient_blue | default: '#a3d5ff' }};
@@ -37,18 +37,17 @@ h3, h5     { color: var(--blue); }
 
 /* ================================
    HERO HEADER (Cayman .page-header)
+   — single black header with logo
    ================================ */
 .page-header{
-  /* Single hero image */
   background: #000 !important;
   background-image: url("{{ '/assets/images/qfin-logo-hero-simple.png' | relative_url }}") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
 
-  /* Size and spacing */
-  min-height: 300px;        /* increase/decrease to taste */
-  padding: 0 !important;    /* remove default Cayman padding */
+  min-height: 300px;      /* adjust height if you want bigger/smaller */
+  padding: 0 !important;  /* remove theme padding */
   border-bottom: 1px solid var(--border);
 }
 
@@ -58,22 +57,34 @@ h3, h5     { color: var(--blue); }
   display: none !important;
 }
 
-/* Ensure no green header text leaks through */
+/* Kill any theme green in the header area */
 .page-header, .page-header * { color: #fff !important; }
-.page-header a { color: #fff !important; }
+.page-header .btn,
+.page-header a.btn,
+.page-header .btn:visited {
+  color: #fff !important;
+  border-color: #fff !important;
+  background: transparent !important;
+}
+.page-header .btn:hover,
+.page-header a.btn:hover {
+  color: #000 !important;
+  background: #fff !important;
+  border-color: #fff !important;
+}
 
-/* If a legacy in-page hero block exists, hide it to avoid duplicates */
+/* If an old in-page hero exists, hide it to avoid duplicates */
 .qfin-hero-banner { display: none !important; }
 
 /* ================================
-   Title styles (used below hero)
+   Title styles (used below header)
    ================================ */
 /* Solid title colour (from _config.yml) */
 .trans-title{
   color: var(--title-color);
   -webkit-text-fill-color: var(--title-color);
   text-align: center;
-  margin: 0.6rem 0 0.2rem 0;
+  margin: 0.8rem 0 0.3rem 0;
 }
 
 /* Add .gradient to switch to trans-flag gradient */
@@ -134,3 +145,8 @@ h3, h5     { color: var(--blue); }
 
 /* Footer */
 .footer-note { margin-top:2rem; color:#bdbdbd; font-size:0.9rem; }
+
+/* Responsive tweak */
+@media (max-width: 640px){
+  .page-header{ min-height: 220px; }
+}
