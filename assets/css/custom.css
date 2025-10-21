@@ -115,8 +115,13 @@ h3, h5     { color: var(--blue); }
 
 .qfin-section { margin: 2rem 0 1rem; }
 .qfin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-.qfin-card { background: var(--card); border:1px solid var(--border); border-radius: 14px; padding: 1rem; }
 
+.qfin-card {
+  background: var(--card);
+  border: 3px solid #fff;   /* was 1px var(--border) */
+  border-radius: 14px;
+  padding: 1rem;
+}
 .qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
 .qfin-desc { margin-top: 0.35rem; }
 
