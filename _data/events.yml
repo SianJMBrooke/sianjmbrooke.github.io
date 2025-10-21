@@ -1,16 +1,12 @@
 
-# Add upcoming events here. Use ISO dates so sorting works.
-# Fields: title, date, time, location, description, signup_url
-- title: QFIN Kickoff with Oliver Haimson (KTH / UMich)
+- title: "QFIN Kick off - Book Talk by Dr Oliver Haimson (University of Michigan School of Information)"
   date: 2025-11-27
-  time: 12:00–13:00
-  location: Lab42 (L0.03), Informatics Institute, University of Amsterdam
-  description: Opening session for the Queer and Feminist Informatics Network — talk + discussion.
-  signup_url: https://example.com/signup/kickoff
-
-- title: Feminist HCI Reading Group — Winter Session
-  date: 2026-01-15
-  time: 16:00–17:30
-  location: Lab42 + Hybrid (Zoom)
-  description: Reading and discussion on feminist data practices and infrastructural justice.
-  signup_url: https://example.com/signup/reading
+  time: "12:00-13:30"
+  location: "Lab42, Amsterdam Science Park (IvI, UvA)"
+  description: "Launch of QFIN with a talk on Trans Technologies followed by discussion and community building."
+  signup_url: "https://example.com/signup/qfin-kickoff"
+  links:
+    - label: "Trans Technologies (MIT Press)"
+      url: "https://mitpress.mit.edu/9780262551861/trans-technologies/"
+    - label: "Lab42 (venue)"
+      url: "https://lab42.uva.nl/"

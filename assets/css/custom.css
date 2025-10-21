@@ -1,84 +1,64 @@
 
-/* QFIN custom styles */
+:root{
+  --bg:#000000;
+  --txt:#ffffff;
+  --pink:#f5a9d6;
+  --blue:#a3d5ff;
+  --card:#0e0e10;
+  --border:#26262b;
+}
+
+html, body { background: var(--bg); color: var(--txt); }
+
+.page-header { background:#000 !important; color:var(--txt) !important; border-bottom:1px solid var(--border); }
+.project-name, .project-tagline { color: var(--txt) !important; }
+
+a { color: var(--blue); }
+a:hover { color: var(--pink); }
+
+/* Monospace headings for readability */
+h1, h2, h3, h4, h5, h6 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  color: var(--txt);
+  letter-spacing: 0.2px;
+}
+
+.qfin-wrap { max-width: 1080px; margin: 0 auto; }
+
 .qfin-hero {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1rem;
-}
-.qfin-hero img {
-  max-height: 64px;
-  height: 64px;
-  width: auto;
-}
-.qfin-tagline {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 0.25rem 0 1rem 0;
-}
-.qfin-section {
-  margin: 2rem 0 1rem 0;
-}
-.qfin-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 140px 1fr;
   gap: 1rem;
+  align-items: center;
+  padding-top: 0.5rem;
 }
-.qfin-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 1rem;
-  background: #fff;
-}
-.qfin-card h3, .qfin-card h4 {
-  margin-top: 0.2rem;
-  margin-bottom: 0.4rem;
-}
-.qfin-meta {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.25rem;
-}
-.qfin-desc {
-  font-size: 0.95rem;
-  margin-top: 0.25rem;
-}
-.qfin-member {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
-.qfin-member img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  background: #fafafa;
-}
-.qfin-btn {
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #3c2b5a;
-  text-decoration: none;
-  font-weight: 600;
-}
-.qfin-btn:hover {
-  background: #3c2b5a;
-  color: #fff !important;
-}
-.qfin-muted {
-  color: #666;
-  font-size: 0.9rem;
-}
-.footer-note {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-@media (prefers-color-scheme: dark) {
-  .qfin-card { background: #111; border-color: #333; }
-  .qfin-muted, .qfin-meta { color: #aaa; }
-}
+.qfin-hero img { width: 140px; height: auto; border-radius: 8px; }
+
+.qfin-tagline { color: var(--txt); font-size: 1.06rem; margin: 0.2rem 0; }
+.qfin-subtle { color: #dadada; font-size: 0.98rem; }
+
+.badge { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border:1px solid var(--border); font-size: 0.8rem; margin-right: 0.4rem; }
+
+.qfin-section { margin: 2rem 0 1rem; }
+.qfin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.qfin-card { background: var(--card); border:1px solid var(--border); border-radius: 14px; padding: 1rem; }
+.qfin-meta { color:#d8d8d8; font-size: 0.95rem; }
+.qfin-desc { margin-top: 0.35rem; }
+
+.qfin-btn { display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; border:1px solid var(--border); text-decoration:none; font-weight:700; color: var(--txt); }
+.qfin-btn:hover { border-color: var(--pink); color:#000; background: var(--pink); }
+
+.qfin-member { display:grid; grid-template-columns: 84px 1fr; gap:0.9rem; align-items:start; }
+.qfin-member img { width:84px; height:84px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background:#111; }
+.qfin-small { font-size:0.95rem; color:#d6d6d6; }
+.qfin-hr { border:0; height:1px; background: var(--border); margin: 1.5rem 0; }
+
+.pub-list { list-style:none; padding-left:0; }
+.pub-list li { border-bottom:1px dashed var(--border); padding:0.6rem 0; }
+.pub-title { color: var(--txt); font-weight:700; }
+.pub-venue { color: var(--blue); }
+.pub-authors { color: #eaeaea; }
+.pub-year { color: var(--pink); font-weight:700; padding-left:0.25rem; }
+.pub-links a { margin-right:0.5rem; }
+
+.footer-note { margin-top:2rem; color:#bdbdbd; font-size:0.9rem; }

@@ -1,12 +1,28 @@
 
-# Add founding members here.
-# Fields: name, bio, email, image
-- name: Dr Siân Brooke
-  bio: Assistant Professor, Digital Interactions Lab (DILab), UvA. Research on inclusive digital environments, neurodiversity, and AI ethics.
-  email: s.brooke@uva.nl
-  image: /assets/images/sian.jpg
+- name: "Dr Siân Brooke"
+  pronouns: "she/her"
+  email: "s.j.m.brooke@uva.nl"
+  affiliation: "Digital Interactions Lab (DILab), Informatics Institute (IvI), University of Amsterdam"
+  profile: "https://www.uva.nl/en/profile/b/r/s.j.m.brooke/s.j.m.brooke.html"
+  image: "/assets/images/sian.jpg"
 
-- name: Nick Oh
-  bio: Researcher in responsible AI and data governance. Co‑author of the PETLP framework for social media data in AI research.
-  email: nick.oh@example.org
-  image: /assets/images/nick.jpg
+- name: "Dr Delfina Martinez Pandiani"
+  pronouns: ""
+  email: "d.s.c.martinez-pandiani@uva.nl"
+  affiliation: "Informatics Institute (IvI), University of Amsterdam"
+  profile: "https://www.uva.nl/en/profile/m/a/d.s.c.martinez-pandiani/d.s.c.martinez-pandiani.html"
+  image: "/assets/images/delfina.jpg"
+
+- name: "Maria Mlocka"
+  pronouns: ""
+  email: "m.l.mlocka@uva.nl"
+  affiliation: "Informatics Institute (IvI), University of Amsterdam"
+  profile: "https://www.uva.nl/en/profile/m/l/m.l.mlocka/m.l.mlocka.html"
+  image: "/assets/images/maria.jpg"
+
+- name: "Mae Sosto"
+  pronouns: ""
+  email: "mae.sosto@cwi.nl"
+  affiliation: "Centrum Wiskunde & Informatica (CWI)"
+  profile: "https://www.cwi.nl/en/people/mae-sosto/"
+  image: "/assets/images/mae.jpg"
