@@ -1,10 +1,10 @@
-
 ---
 layout: default
 title: Home
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
 <script src="{{ '/assets/js/bibtex.js' | relative_url }}"></script>
 
 <div class="qfin-wrap">
