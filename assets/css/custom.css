@@ -39,28 +39,31 @@ h3, h5     { color: var(--blue); }
    HERO HEADER (Cayman .page-header)
    ================================ */
 .page-header{
-  /* Make header the hero image */
-  background:
-    #000
-    url("{{ '/assets/images/qfin-logo-hero.png' | relative_url }}")
-    no-repeat
-    center center !important;
+  /* Single hero image */
+  background: #000 !important;
+  background-image: url("{{ '/assets/images/qfin-logo-hero.png' | relative_url }}") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
   background-size: contain !important;
 
   /* Size and spacing */
-  min-height: 300px;        /* increase for a bigger hero */
+  min-height: 300px;        /* increase/decrease to taste */
   padding: 0 !important;    /* remove default Cayman padding */
   border-bottom: 1px solid var(--border);
 }
 
-/* Hide the theme’s text in the header so only the image shows */
+/* Hide theme header text so only the image shows */
 .page-header .project-name,
 .page-header .project-tagline{
   display: none !important;
 }
 
-/* If you ever want a subtle shadow under the hero */
-/* .page-header { box-shadow: 0 12px 40px rgba(0,0,0,0.35); } */
+/* Ensure no green header text leaks through */
+.page-header, .page-header * { color: #fff !important; }
+.page-header a { color: #fff !important; }
+
+/* If a legacy in-page hero block exists, hide it to avoid duplicates */
+.qfin-hero-banner { display: none !important; }
 
 /* ================================
    Title styles (used below hero)
@@ -126,7 +129,7 @@ h3, h5     { color: var(--blue); }
 .pub-title { color:var(--txt); font-weight:700; }
 .pub-venue { color: var(--blue); }
 .pub-authors { color:#eaeaea; }
-.pub-year { color: var(--pink); font-weight:700; padding-left:0.25rem; }
+.pub-year { color: var(--pink); font-weight:700; padding-left: 0.25rem; }
 .pub-links a { margin-right:0.5rem; }
 
 /* Footer */
