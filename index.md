@@ -69,10 +69,6 @@ title: "QFIN - Queer and Feminist Informatics Network"
   <!-- PUBLICATIONS -->
   <div class="qfin-section">
     <h2>Publications by QFIN members and speakers</h2>
-    <p class="qfin-subtle">
-      Add BibTeX entries to <code>assets/bibliography/publications.bib</code>.
-      They render below and are sorted alphabetically by the first author's surname.
-    </p>
     <div id="pub-container"><em class="qfin-subtle">Loading publications...</em></div>
     <script>
       document.addEventListener('DOMContentLoaded', function(){
