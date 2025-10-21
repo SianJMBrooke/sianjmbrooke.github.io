@@ -14,7 +14,7 @@ plugins:
   - jekyll-remote-theme
 
 qfin_logo: "/assets/images/qfin-logo-hero-simple.png"
-dilab_logo: "/assets/images/dilab-logo.svg"
+dilab_logo: "/assets/images/dilab-logo-white.png"
 
 markdown: kramdown
 kramdown:
