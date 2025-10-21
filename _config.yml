@@ -1,6 +1,7 @@
 
 title: "QFIN - Queer and Feminist Informatics Network"
 description: "An open, inclusive network embedded in the Digital Interactions Lab (DILab) at the Informatics Institute (IvI), University of Amsterdam."
+qfin_logo: "/assets/images/qfin-logo-hero.png"
 baseurl: ""  # If using a project site, set this to "/<repo>"
 url: "https://yourusername.github.io"
 
