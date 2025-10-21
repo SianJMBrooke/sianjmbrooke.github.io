@@ -4,8 +4,6 @@ async function renderPublications(bibPath, containerId){
     const resp = await fetch(bibPath, {cache: 'no-store'});
     const text = await resp.text();
     const entries = parseBibTeX(text);
-
-    // Sort alphabetically by first author's surname, then title
     entries.sort((a,b)=>{
       const aName = (a.authors[0]?.last || "").toLowerCase();
       const bName = (b.authors[0]?.last || "").toLowerCase();
@@ -13,15 +11,12 @@ async function renderPublications(bibPath, containerId){
       if (aName > bName) return 1;
       return (a.fields.title||"").toLowerCase().localeCompare((b.fields.title||"").toLowerCase());
     });
-
     const ul = document.createElement('ul'); ul.className='pub-list';
     entries.forEach(e=> ul.appendChild(renderEntry(e)));
     const container = document.getElementById(containerId);
     container.innerHTML = "";
     container.appendChild(ul);
-  }catch(err){
-    console.error("Publications render failed:", err);
-  }
+  }catch(err){ console.error("Publications render failed:", err); }
 }
 
 function parseBibTeX(text){
@@ -69,12 +64,10 @@ function renderEntry(e){
   const year = f.year ? `(${f.year})` : "";
   const title = f.title || e.key;
   const venue = f.journal || f.booktitle || f.publisher || "";
-
   const doi = f.doi ? `<a href="https://doi.org/${f.doi}" target="_blank" rel="noopener">DOI</a>` : "";
   const url = f.url ? `<a href="${f.url}" target="_blank" rel="noopener">URL</a>` : "";
   const pdf = f.pdf ? `<a href="${f.pdf}" target="_blank" rel="noopener">PDF</a>` : "";
   const links = [doi, url, pdf].filter(Boolean).join(" ");
-
   li.innerHTML = `
     <div class="pub-line">
       <span class="pub-authors">${authors}</span>

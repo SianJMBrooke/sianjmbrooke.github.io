@@ -19,9 +19,31 @@ a:hover { color: var(--pink); }
 /* Monospace headings for readability */
 h1, h2, h3, h4, h5, h6 {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-  color: var(--txt);
   letter-spacing: 0.2px;
 }
+
+/* Heading colours: title uses trans flag gradient, h2 pink, h3 blue */
+.trans-title {
+  background: linear-gradient(180deg,
+    var(--blue) 0%,
+    var(--blue) 20%,
+    var(--pink) 20%,
+    var(--pink) 40%,
+    #ffffff 40%,
+    #ffffff 60%,
+    var(--pink) 60%,
+    var(--pink) 80%,
+    var(--blue) 80%,
+    var(--blue) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+h2 { color: var(--pink); }
+h3 { color: var(--blue); }
+h4, h5, h6 { color: var(--txt); }
 
 .qfin-wrap { max-width: 1080px; margin: 0 auto; }
 
@@ -55,9 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .pub-list { list-style:none; padding-left:0; }
 .pub-list li { border-bottom:1px dashed var(--border); padding:0.6rem 0; }
-.pub-title { color: var(--txt); font-weight:700; }
+.pub-title { color:var(--txt); font-weight:700; }
 .pub-venue { color: var(--blue); }
-.pub-authors { color: #eaeaea; }
+.pub-authors { color:#eaeaea; }
 .pub-year { color: var(--pink); font-weight:700; padding-left:0.25rem; }
 .pub-links a { margin-right:0.5rem; }
 

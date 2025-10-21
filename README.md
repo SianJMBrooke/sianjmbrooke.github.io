@@ -1,7 +1,7 @@
 
 # QFIN - GitHub Pages site
 
-Dark theme with trans flag accents, monospace headings, DILab embedding, events, publications from BibTeX, and founding members.
+Dark theme with trans flag accents, gradient title, monospace headings, DILab embedding, events, publications from BibTeX, and founding members.
 
 ## Publish
 1. Create a GitHub repo and upload these files.
@@ -15,6 +15,4 @@ Dark theme with trans flag accents, monospace headings, DILab embedding, events,
 - Logos: replace files in `assets/images/`
 - Styles: `assets/css/custom.css`
 
-## Notes
-- Quote YAML values that contain colons or non ASCII characters.
-- For internal links in project sites, prefix with `{{ site.baseurl }}` or use `relative_url` filters.
+Notes: quote YAML values that contain colons or non ASCII characters.
