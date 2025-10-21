@@ -31,12 +31,11 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
 <div class="qfin-wrap">
 
-{% if site.dilab_logo %}
-  <p style="text-align:center;">
-    <img src="{{ site.dilab_logo | relative_url }}"
-         alt="DILab logo"
-         style="max-height:60px; display:block; margin:0 auto;">
-  </p>
+<div class="logo-row">
+  <img src="{{ '/assets/images/dilab-logo-white.png' | relative_url }}" alt="DILab">
+  <img src="{{ '/assets/images/uva-ivi-white.png'    | relative_url }}" alt="UvA Informatics Institute" class="logo-ivi">
+</div>
+
 {% endif %}
 
   <!-- ABOUT -->
