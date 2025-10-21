@@ -5,6 +5,10 @@ qfin_logo: "/assets/images/qfin-logo-hero.png"
 baseurl: ""  # If using a project site, set this to "/<repo>"
 url: "https://yourusername.github.io"
 
+title_color: "#ffffff"          # solid title colour
+title_gradient_blue: "#a3d5ff"  # light blue
+title_gradient_pink: "#f5a9d6"  # light pink
+
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
