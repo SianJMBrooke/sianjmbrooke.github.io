@@ -21,6 +21,14 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
   /* Only DOI & URL are light blue */
   .pub-links a[data-accent="true"] { color: var(--blue) !important; }
+
+  /* Side-by-side, centered logos */
+  .logo-row {
+    display:flex; justify-content:center; align-items:center;
+    gap:28px; flex-wrap:wrap; margin: 1rem 0 2rem;
+  }
+  .logo-row img { display:block; height:56px; width:auto; }
+  .logo-row img.logo-ivi { height:44px; } /* tweak the UvA/IvI mark size */
 </style>
 
 <!-- Title under the single header hero image -->
@@ -31,12 +39,11 @@ title: "QFIN - Queer and Feminist Informatics Network"
 
 <div class="qfin-wrap">
 
-<div class="logo-row">
-  <img src="{{ '/assets/images/dilab-logo-white.png' | relative_url }}" alt="DILab">
-  <img src="{{ '/assets/images/uva-ivi-white.png'    | relative_url }}" alt="UvA Informatics Institute" class="logo-ivi">
-</div>
-
-{% endif %}
+  <!-- DILab + IvI logos side by side -->
+  <div class="logo-row">
+    <img src="{{ '/assets/images/dilab-logo-white.png' | relative_url }}" alt="DILab">
+    <img src="{{ '/assets/images/uva-ivi-white.png'    | relative_url }}" alt="UvA Informatics Institute" class="logo-ivi">
+  </div>
 
   <!-- ABOUT -->
   <div class="qfin-section">
@@ -47,7 +54,6 @@ title: "QFIN - Queer and Feminist Informatics Network"
       The network is embedded in the <strong>Digital Interactions Lab (DILab)</strong> at the
       <strong>Informatics Institute (IvI), University of Amsterdam</strong>.
     </p>
-
   </div>
 
   <!-- UPCOMING EVENTS -->
@@ -95,7 +101,6 @@ title: "QFIN - Queer and Feminist Informatics Network"
     <script>
       document.addEventListener('DOMContentLoaded', function(){
         renderPublications("{{ '/assets/bibliography/publications.bib' | relative_url }}", "pub-container");
-
         // After the list renders, mark DOI + URL links for accent colour
         const markAccent = () => {
           document.querySelectorAll('.pub-links a').forEach(a => {
@@ -105,7 +110,6 @@ title: "QFIN - Queer and Feminist Informatics Network"
             }
           });
         };
-        // small delay to ensure renderPublications finished
         setTimeout(markAccent, 0);
       });
     </script>
