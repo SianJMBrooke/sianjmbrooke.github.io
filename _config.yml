@@ -1,0 +1,21 @@
+
+title: "QFIN — Queer and Feminist Informatics Network"
+description: "An open, inclusive network at the Informatics Institute (University of Amsterdam — DILab) for trans and feminist scholars and allies across the Netherlands."
+# If this is a project site, set your baseurl (e.g., /qfin); if it's a user/org site, leave baseurl empty.
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# GitHub Pages theme
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Optional logo path (used in our index)
+qfin_logo: "/assets/images/qfin-logo.jpg"
+
+# Markdown + kramdown defaults
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Collections/data (we use _data for events & members)

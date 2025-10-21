@@ -1,0 +1,12 @@
+
+# Add founding members here.
+# Fields: name, bio, email, image
+- name: Dr Siân Brooke
+  bio: Assistant Professor, Digital Interactions Lab (DILab), UvA. Research on inclusive digital environments, neurodiversity, and AI ethics.
+  email: s.brooke@uva.nl
+  image: /assets/images/sian.jpg
+
+- name: Nick Oh
+  bio: Researcher in responsible AI and data governance. Co‑author of the PETLP framework for social media data in AI research.
+  email: nick.oh@example.org
+  image: /assets/images/nick.jpg

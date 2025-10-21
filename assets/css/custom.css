@@ -1,0 +1,84 @@
+
+/* QFIN custom styles */
+.qfin-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.qfin-hero img {
+  max-height: 64px;
+  height: 64px;
+  width: auto;
+}
+.qfin-tagline {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0.25rem 0 1rem 0;
+}
+.qfin-section {
+  margin: 2rem 0 1rem 0;
+}
+.qfin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.qfin-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+}
+.qfin-card h3, .qfin-card h4 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+.qfin-meta {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+.qfin-desc {
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+.qfin-member {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+.qfin-member img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+.qfin-btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #3c2b5a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.qfin-btn:hover {
+  background: #3c2b5a;
+  color: #fff !important;
+}
+.qfin-muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+@media (prefers-color-scheme: dark) {
+  .qfin-card { background: #111; border-color: #333; }
+  .qfin-muted, .qfin-meta { color: #aaa; }
+}
