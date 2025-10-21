@@ -1,7 +1,6 @@
 
 # QFIN - GitHub Pages site
 
-Dark theme with trans flag accents, gradient title, monospace headings, DILab embedding, events, publications from BibTeX, and founding members.
 
 ## Publish
 1. Create a GitHub repo and upload these files.
