@@ -84,3 +84,68 @@ h4, h5, h6 { color: var(--txt); }
 .pub-links a { margin-right:0.5rem; }
 
 .footer-note { margin-top:2rem; color:#bdbdbd; font-size:0.9rem; }
+
+
+/* === QFIN hero and headings === */
+
+:root{
+  --bg:#000000;
+  --txt:#ffffff;
+  --pink:#f5a9d6;
+  --blue:#a3d5ff;
+  --card:#0e0e10;
+  --border:#26262b;
+}
+
+html, body { background: var(--bg); color: var(--txt); }
+
+/* Monospace headings and alternating colours */
+h1, h2, h3, h4, h5, h6 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing: 0.2px;
+}
+/* Alternating colours */
+h2, h4, h6 { color: var(--pink); }
+h3, h5 { color: var(--blue); }
+
+/* Hero banner like Google Forms */
+.qfin-hero-banner {
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height: 180px;
+  border-bottom: 1px solid var(--border);
+}
+.qfin-hero-banner img { max-height: 120px; width:auto; }
+
+/* Title gradient in trans colours */
+.trans-title {
+  background: linear-gradient(180deg,
+    var(--blue) 0%, var(--blue) 20%,
+    var(--pink) 20%, var(--pink) 40%,
+    #ffffff 40%, #ffffff 60%,
+    var(--pink) 60%, var(--pink) 80%,
+    var(--blue) 80%, var(--blue) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0.6rem 0 0.2rem 0;
+  text-align: center;
+}
+
+/* Tagline */
+.qfin-tagline {
+  color:#e8e8e8;
+  text-align:center;
+  margin: 0 0 1rem 0;
+}
+
+/* Container wrap */
+.qfin-wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+/* Member card heading should inherit level colour */
+.qfin-member h3 { margin: 0 0 0.2rem 0; }
