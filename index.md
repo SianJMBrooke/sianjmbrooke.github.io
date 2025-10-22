@@ -65,7 +65,7 @@ Most events take place in Lab42 at Amsterdam Science Park, with hybrid participa
   </div>
 
   <div style="text-align:center; margin-top: 2em;">
-  <a href="https://forms.gle/YOUR_FORM_LINK_HERE" 
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScgq7ggljOVLVyLeNbCSD1TisPGPgw7IfzfCVVLvTuo0sI-VQ/viewform?usp=header" 
      target="_blank" 
      class="btn btn-primary"
      style="background-color:#7e3ff2; color:white; padding:0.8em 1.5em; border-radius:8px; text-decoration:none; font-weight:600;">
