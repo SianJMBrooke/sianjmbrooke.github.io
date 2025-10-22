@@ -64,6 +64,15 @@ Most events take place in Lab42 at Amsterdam Science Park, with hybrid participa
 </p>
   </div>
 
+  <div style="text-align:center; margin-top: 2em;">
+  <a href="https://forms.gle/YOUR_FORM_LINK_HERE" 
+     target="_blank" 
+     class="btn btn-primary"
+     style="background-color:#7e3ff2; color:white; padding:0.8em 1.5em; border-radius:8px; text-decoration:none; font-weight:600;">
+     Join the QFIN Mailing List
+  </a>
+</div>
+
   <!-- UPCOMING EVENTS -->
   <div class="qfin-section">
     <h2 style="color:var(--blue);">Upcoming events</h2>
