@@ -4,9 +4,9 @@
   time: "12:00-13:30"
   location: "Lab42, Amsterdam Science Park (IvI, UvA)"
   description: "Launch of QFIN with a talk on Trans Technologies followed by discussion and community building."
-  signup_url: "https://example.com/signup/qfin-kickoff"
+  signup_url: "https://docs.google.com/forms/d/e/1FAIpQLSfQrHC87VKDQlnu9qcjB0GCJQoDmdKgyYtlkERWBy_GqCGCUg/viewform?usp=publish-editor"
   links:
     - label: "Trans Technologies (MIT Press)"
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSfQrHC87VKDQlnu9qcjB0GCJQoDmdKgyYtlkERWBy_GqCGCUg/viewform?usp=publish-editor"
+      url: "https://mitpress.mit.edu/9780262551861/trans-technologies/"
     - label: "Lab42 (venue)"
       url: "https://lab42.uva.nl/"
